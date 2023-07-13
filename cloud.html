@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cloud.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <script src="./cloud.js"></script>
+</head>
+<body>
+    <div class="stage">
+        <div class="frame">
+            <div class="startend">
+                <div class="sky"></div>
+                <div class="sky"></div>
+                <div class="sky"></div>
+            </div>
+            <div class="cloudGroup">
+                <div class="sky"></div>
+                <div class="sky"></div>
+                <div class="sky"></div>
+            </div>
+            <div class="startend">
+                <div class="sky"></div>
+                <div class="sky"></div>
+                <div class="sky"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="name">
+                <h1>Falling</h1>
+                <!-- <h1>John</h1> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter for the effect -->
+    <svg style="display:block;height:0;">
+        <filter id="filter">
+            <feTurbulence type="fractalNoise"
+            baseFrequency=".01" numOctaves="10" />
+            <feDisplacementMap in="SourceGraphic" scale="240" />
+        </filter>
+    </svg>
+    
+</body>
+</html>

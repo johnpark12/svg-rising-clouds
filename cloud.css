@@ -1,0 +1,61 @@
+html, body { 
+    margin: 0; 
+}
+.cloud {
+    border-radius: 50%;
+    filter: url(#filter);
+    background-color: black;
+}
+.sky{
+    overflow: visible;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+.frame{
+    animation-name: upwards;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -100vh;
+    width:100vw;
+    z-index: 1;
+    background-color: lightblue;
+}
+.stage{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+    /* transform: scale(0.8); */
+}
+.stage .content{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.stage .content .name{
+    width:90%;
+    height: 90%;
+    /* border: solid 5px black; */
+    /* background-color: rgba(0,0,0,0.8); */
+    display: flex;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+.stage .content .name {
+    font-size: 90px;
+    font-family: 'Oxygen', sans-serif;
+}
+@keyframes upwards{
+    to{
+        transform: translate(0,-600vh)
+    }
+}
